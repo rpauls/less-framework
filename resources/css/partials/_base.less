@@ -34,6 +34,38 @@ img {
     display: none !important;
 }
 
+a,
+a:link,
+a:active,
+a:hover,
+a:visited {
+	text-decoration: none;
+    outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+
+/* HELPER CLASSES */
+.no-marg { margin:0; }
+
+.div-center {
+    margin: 0 auto;
+    float: none !important;
+}
+
+.text-bold { font-weight: bold; }
+
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+
+.alert { color: @partial-color-alert; }
+.warning { color: @partial-color-warning; }
+
 
 /* VIEWPORT SPECIFIC DEFINITIONS */
 
