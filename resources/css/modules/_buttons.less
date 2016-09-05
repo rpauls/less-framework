@@ -1,0 +1,70 @@
+/*** BUTTONS ***/
+
+.btn {
+    display: inline-block;
+    line-height: 1;
+    zoom: 1;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-decoration: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    .box-sizing(border-box);
+    .user-select(none);
+    -webkit-user-drag: none;
+    .transition();
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0.5em 1em;
+
+    background: @color-blue;
+    color: @color-white;
+    border: 0;
+    border: 1px solid #999;  /*IE 6/7/8*/
+    border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+    border-radius: 1px;
+
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+
+    &.btn-hover,
+    &:hover,
+    &:focus {
+        background: @color-silver;
+        color: @color-blue;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &.btn-active,
+    &:active {
+        .box-shadow(0 0 0 1px rgba(0,0,0, 0.15) inset);
+        border-color: #000\9;
+    }
+
+    &[disabled],
+    &.btn-disabled,
+    &.btn-disabled:hover,
+    &.btn-disabled:focus,
+    &.btn-disabled:active {
+        border: none;
+        background-image: none;
+        cursor: not-allowed;
+        .opacity(0.40);
+        .box-shadow(none);
+    }
+
+    &.btn-hidden {
+        display: none !important;
+    }
+
+    &.btn-size-xs { font-size: 70%; }
+    &.btn-size-s {  font-size: 85%; }
+    &.btn-size-l {  font-size: 110%; }
+    &.btn-size-xl {  font-size: 125%; }
+}

@@ -1,0 +1,290 @@
+/*** FORMS ***/
+
+.forms {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    select,
+    textarea {
+        padding: 0.5em 0.6em;
+        display: inline-block;
+        border: 1px solid @color-gray;
+        border-radius: 4px;
+        vertical-align: middle;
+        .box-shadow(inset 0 1px 3px @color-silver);
+        .box-sizing(border-box);
+    }
+
+    /* Workaround for IE8, because it won't execute CSS that contains CSS3 selectors */
+    input:not([type]) {
+        padding: 0.5em 0.6em;
+        display: inline-block;
+        border: 1px solid @color-silver;
+        .box-shadow(inset 0 1px 3px @color-gray);
+        .box-sizing(border-box);
+    }
+
+    /* More space to display color input (Chrome 32/34 on OS X) */
+    input[type="color"] {
+        padding: 0.2em 0.5em;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus,
+    input[type="url"]:focus,
+    input[type="date"]:focus,
+    input[type="month"]:focus,
+    input[type="time"]:focus,
+    input[type="datetime"]:focus,
+    input[type="datetime-local"]:focus,
+    input[type="week"]:focus,
+    input[type="number"]:focus,
+    input[type="search"]:focus,
+    input[type="tel"]:focus,
+    input[type="color"]:focus,
+    select:focus,
+    textarea:focus {
+        outline: 0;
+        border-color: @color-blue;
+    }
+
+    /* Workaround for IE8, because it won't execute CSS that contains CSS3 selectors */
+    input:not([type]):focus {
+        outline: 0;
+        border-color: @color-blue;
+    }
+
+    input[type="file"]:focus,
+    input[type="radio"]:focus,
+    input[type="checkbox"]:focus {
+        outline: thin solid @color-blue;
+        outline: 1px auto @color-blue;
+    }
+
+    .is-checkbox,
+    .is-radio {
+        margin: 0.5em 0;
+        display: block;
+    }
+
+    input[type="text"][disabled],
+    input[type="password"][disabled],
+    input[type="email"][disabled],
+    input[type="url"][disabled],
+    input[type="date"][disabled],
+    input[type="month"][disabled],
+    input[type="time"][disabled],
+    input[type="datetime"][disabled],
+    input[type="datetime-local"][disabled],
+    input[type="week"][disabled],
+    input[type="number"][disabled],
+    input[type="search"][disabled],
+    input[type="tel"][disabled],
+    input[type="color"][disabled],
+    select[disabled],
+    textarea [disabled] {
+        cursor: not-allowed;
+        background-color: @color-light;
+        color: @color-dark;
+    }
+
+    /* Workaround for IE8, because it won't execute CSS that contains CSS3 selectors */
+    input:not([type])[disabled] {
+        cursor: not-allowed;
+        background-color: @color-light;
+        color: @color-dark;
+    }
+
+    input[readonly],
+    select[readonly],
+    textarea[readonly] {
+        background-color: @color-light;
+        color: @color-dark;
+    }
+
+    input:focus:invalid,
+    select:focus:invalid,
+    textarea:focus:invalid {
+        outline-color: @color-red;
+    }
+
+    select {
+        height: 2.25em; // Normalize height
+        border: 1px solid @color-gray;
+        background-color: @color-white;
+    }
+
+    select[multiple] {
+        height: auto;
+    }
+
+    label {
+        margin: 0.5em 0 0.2em;
+    }
+
+    fieldset {
+        margin: 0;
+        padding: 0.35em 0 0.75em;
+        border: 0;
+    }
+
+    legend {
+        display: block;
+        width: 100%;
+        padding: 0.3em 0;
+        margin-bottom: 0.3em;
+        color: @color-darkgray;
+        border-bottom: 1px solid @color-silver;
+    }
+
+    .form-stack {
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="url"],
+        input[type="date"],
+        input[type="month"],
+        input[type="time"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="week"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="color"],
+        select,
+        textarea {
+            display: block;
+            margin: 0.25em 0;
+        }
+
+        /* Workaround for IE8, because it won't execute CSS that contains CSS3 selectors */
+        input:not([type]) {
+            display: block;
+            margin: 0.25em 0;
+        }
+    }
+
+    /* Aligned Form Elements */
+    .form-align {
+        input,
+        select,
+        textarea,
+        .from-message-inline {
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            vertical-align: middle;
+        }
+
+        textarea {
+            vertical-align: top;
+        }
+
+        .form-control-group {
+            margin-bottom: 0.5em;
+
+            label {
+                text-align: right;
+                display: inline-block;
+                vertical-align: middle;
+                width: 10em;
+                margin: 0 1em 0 0;
+            }
+        }
+
+        .form-controls {
+            margin: 1.5em 0 0 11em;
+        }
+
+    }
+
+    /* Rounded Input Elements */
+    input.input-rounded,
+    .input-rounded {
+        border-radius: 2em;
+        padding: 0.5em 1em;
+    }
+
+    /* Grouped Form Elements */
+    .form-group {
+        fieldset {
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            display: block;
+            padding: 10px;
+            margin: 0 0 -1px;
+            border-radius: 0;
+            position: relative;
+            top: -1px;
+        }
+
+        input:focus,
+        textarea:focus {
+            z-index: 3;
+        }
+
+        input:first-child,
+        textarea:first-child {
+            top: 1px;
+            border-radius: 4px 4px 0 0;
+            margin: 0;
+        }
+
+        input:first-child:last-child,
+        textarea:first-child:last-child {
+            top: 1px;
+            border-radius: 4px;
+            margin: 0;
+        }
+
+        input:last-child,
+        textarea:last-child {
+            top: -2px;
+            border-radius: 0 0 4px 4px;
+            margin: 0;
+        }
+
+        button {
+            margin: 0.35em 0;
+        }
+    }
+
+    .input-size-1-1 { width: 100%; }
+    .input-size-3-4 { width: 75%; }
+    .input-size-2-3 { width: 66.66%; }
+    .input-size-1-2 { width: 50%; }
+    .input-size-1-3 { width: 33.33%; }
+    .input-size-1-4 { width: 25%; }
+
+    /* Inline helper for forms */
+    .form-message-inline {
+        display: inline-block;
+        padding-left: 0.3em;
+        color: @color-dark;
+        vertical-align: middle;
+        font-size: 0.875em;
+    }
+
+    /* Block helper for forms */
+    .form-message {
+        display: block;
+        color: @color-dark;
+        font-size: 0.875em;
+    }
+}
