@@ -54,13 +54,13 @@
     input[type="color"]:focus,
     select:focus,
     textarea:focus {
-        outline: 0;
+        outline: -1px;
         border-color: @forms-color-outline;
     }
 
     /* Workaround for IE8, because it won't execute CSS that contains CSS3 selectors */
     input:not([type]):focus {
-        outline: 0;
+        outline: -1px;
         border-color: @forms-color-outline;
     }
 
