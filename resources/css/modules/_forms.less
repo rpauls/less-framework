@@ -19,10 +19,10 @@
     textarea {
         padding: 0.5em 0.6em;
         display: inline-block;
-        border: 1px solid @color-gray;
-        border-radius: 1px;
+        border: 1px solid @forms-color-border;
+        border-radius: @forms-border-radius;
         vertical-align: middle;
-        .box-shadow(inset 0 1px 3px @color-silver);
+        .box-shadow(inset 0 1px 3px @forms-color-shadow);
         .box-sizing(border-box);
     }
 
@@ -30,8 +30,8 @@
     input:not([type]) {
         padding: 0.5em 0.6em;
         display: inline-block;
-        border: 1px solid @color-silver;
-        .box-shadow(inset 0 1px 3px @color-gray);
+        border: 1px solid @forms-color-border;
+        .box-shadow(inset 0 1px 3px @forms-color-shadow);
         .box-sizing(border-box);
     }
 
@@ -57,20 +57,20 @@
     select:focus,
     textarea:focus {
         outline: 0;
-        border-color: @color-blue;
+        border-color: @forms-color-outline;
     }
 
     /* Workaround for IE8, because it won't execute CSS that contains CSS3 selectors */
     input:not([type]):focus {
         outline: 0;
-        border-color: @color-blue;
+        border-color: @forms-color-outline;
     }
 
     input[type="file"]:focus,
     input[type="radio"]:focus,
     input[type="checkbox"]:focus {
-        outline: thin solid @color-blue;
-        outline: 1px auto @color-blue;
+        outline: thin solid @forms-color-outline;
+        outline: 1px auto @forms-color-outline;
     }
 
     .is-checkbox,
@@ -96,41 +96,41 @@
     select[disabled],
     textarea [disabled] {
         cursor: not-allowed;
-        background-color: @color-silver;
-        color: @color-black;
+        background-color: @forms-color-disabled;
+        color: @forms-color-font;
     }
 
     /* Workaround for IE8, because it won't execute CSS that contains CSS3 selectors */
     input:not([type])[disabled] {
         cursor: not-allowed;
-        background-color: @color-silver;
-        color: @color-black;
+        background-color: @forms-color-disabled;
+        color: @forms-color-font;
     }
 
     input[readonly],
     select[readonly],
     textarea[readonly] {
-        background-color: @color-light;
-        color: @color-black;
+        background-color: @forms-color-readonly;
+        color: @forms-color-font;
     }
 
     input:focus:invalid,
     select:focus:invalid,
     textarea:focus:invalid {
-        color: @color-red;
-        border-color: @color-red;
+        color: @forms-color-invalid;
+        border-color: @forms-color-invalid;
     }
 
     input[type="file"]:focus:invalid:focus,
     input[type="radio"]:focus:invalid:focus,
     input[type="checkbox"]:focus:invalid:focus {
-        outline-color: @color-red;
+        outline-color: @forms-color-invalid;
     }
 
     select {
         height: 2.25em; // Normalize height
-        border: 1px solid @color-gray;
-        background-color: @color-white;
+        border: 1px solid @forms-color-border;
+        background-color: @forms-color-select;
     }
 
     select[multiple] {
@@ -153,7 +153,7 @@
         padding: 0.3em 0;
         margin-bottom: 0.3em;
         color: @color-darkgray;
-        border-bottom: 1px solid @color-silver;
+        border-bottom: 1px solid @forms-color-shadow;
     }
 
     &.form-stack {
@@ -284,7 +284,7 @@
     .form-message-inline {
         display: inline-block;
         padding-left: 0.3em;
-        color: @color-dark;
+        color: @forms-color-message;
         vertical-align: middle;
         font-size: 0.875em;
     }
@@ -292,7 +292,7 @@
     /* Block helper for forms */
     .form-message {
         display: block;
-        color: @color-dark;
+        color: @forms-color-message;
         font-size: 0.875em;
     }
 }
