@@ -15,7 +15,7 @@
     &:hover {
         + label {
             &:before {
-                border-color: @color-black;
+                border-color: @extforms-color-border-hov;
             }
         }
     }
@@ -39,27 +39,27 @@
         &:before {
             .box-sizing(content-box);
             content: '';
-            color: @color-blue;
+            color: @extforms-color-primary;
             position: absolute;
             top: 50%;
             left: 0;
-            width: @input-width;
-            height: @input-height;
-            margin-top: -(@input-height/2 + @input-border-width);
-            border: @input-border-width solid @color-gray;
+            width: @extforms-width;
+            height: @extforms-height;
+            margin-top: -(@extforms-height/2 + @extforms-border-width);
+            border: @extforms-border-width solid @extforms-color-border;
             text-align: center;
         }
 
         &:after {
             .box-sizing(content-box);
             content: '';
-            background-color: @color-blue;
+            background-color: @extforms-color-primary;
             position: absolute;
             top: 50%;
-            left: @input-border-width + @input-active-scale/2;
-            width: @input-width - @input-active-scale;
-            height: @input-height - @input-active-scale;
-            margin-top: -((@input-height - @input-active-scale)/2);
+            left: @extforms-border-width + @extforms-active-scale/2;
+            width: @extforms-width - @extforms-active-scale;
+            height: @extforms-height - @extforms-active-scale;
+            margin-top: -((@extforms-height - @extforms-active-scale)/2);
             .transform(scale(0));
             .transform-origin(50%);
             .transition( transform 200ms ease-out);
@@ -77,7 +77,7 @@ input[type="checkbox"].ext-checkbox {
             height: 3px;
             margin-top: -4px;
             border-style: solid;
-            border-color: @color-blue;
+            border-color: @extforms-color-primary;
             border-width: 0 0 3px 3px;
             border-image: none;
             .transform(~"rotate(-45deg) scale(0)");
@@ -102,7 +102,7 @@ input[type="radio"].ext-radio {
         + label {
             &:before {
                 animation: borderscale 300ms ease-in-out;
-                background-color: @color-white;
+                background-color: @extforms-color-bg;
             }
             &:after {
                 .transform(scale(1));
@@ -133,9 +133,9 @@ input[type="checkbox"].ext-checkbox {
 
 @keyframes borderscale {
 	50% {
-		.box-shadow(0 0 0 2px @color-blue);
+		.box-shadow(0 0 0 2px @extforms-color-primary);
 	}
     100 {
-        .box-shadow(0 0 0 0 @color-blue);
+        .box-shadow(0 0 0 0 @extforms-color-primary);
     }
 }
