@@ -296,3 +296,68 @@
         font-size: 0.875em;
     }
 }
+
+@media only screen and (max-width : @smartphone-viewport-width) {
+    .forms {
+        button[type="submit"] {
+            margin: 0.7em 0 0;
+        }
+
+        input:not([type]),
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="url"],
+        input[type="date"],
+        input[type="month"],
+        input[type="time"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="week"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="color"],
+        label {
+            margin-bottom: 0.3em;
+            display: block;
+        }
+
+        input:not([type]),
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="url"],
+        input[type="date"],
+        input[type="month"],
+        input[type="time"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="week"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="color"] {
+            margin-bottom: 0;
+        }
+
+        &.forms-align .forms-control-group label {
+            margin-bottom: 0.3em;
+            text-align: left;
+            display: block;
+            width: 100%;
+        }
+
+        &.forms-form-align .forms-controls {
+            margin: 1.5em 0 0 0;
+        }
+
+        .forms-message-inline,
+        .forms-message {
+            display: block;
+            font-size: 0.75em;
+            /* Increased bottom padding to make it group with its related input element. */
+            padding: 0.2em 0 0.8em;
+        }
+    }
+}
