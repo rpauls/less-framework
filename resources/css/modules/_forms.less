@@ -117,6 +117,13 @@
     input:focus:invalid,
     select:focus:invalid,
     textarea:focus:invalid {
+        color: @color-red;
+        border-color: @color-red;
+    }
+
+    input[type="file"]:focus:invalid:focus,
+    input[type="radio"]:focus:invalid:focus,
+    input[type="checkbox"]:focus:invalid:focus {
         outline-color: @color-red;
     }
 
@@ -220,7 +227,7 @@
     }
 
     /* Grouped Form Elements */
-    &.form-group {
+    .form-group {
         fieldset {
             margin-bottom: 10px;
         }
