@@ -106,7 +106,7 @@ input[type="radio"].ext-radio {
     &:checked {
         + label {
             &:before {
-                animation: borderscale 300ms ease-in;
+                animation: borderscale 300ms ease-in-out;
                 background-color: @color-white;
             }
             &:after {
@@ -127,7 +127,7 @@ input[type="checkbox"].ext-checkbox {
     &:checked {
         + label {
             &:before {
-                animation: borderscale 200ms ease-in;
+                animation: borderscale 200ms ease-in-out;
             }
             &:after {
                 .transform(~"rotate(-45deg) scale(1)")
@@ -138,6 +138,9 @@ input[type="checkbox"].ext-checkbox {
 
 @keyframes borderscale {
 	50% {
-		box-shadow: 0 0 0 2px @color-blue;
+		.box-shadow(0 0 0 2px @color-blue);
 	}
+    100 {
+        .box-shadow(0 0 0 0 @color-blue);
+    }
 }
