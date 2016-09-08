@@ -11,8 +11,9 @@ html {
     height: 100%;
 }
 
-html, body {
-    .font-size(@base-font-size);
+html,
+body {
+    font-size: @base-font-size;
 }
 
 body {
@@ -82,9 +83,7 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
         display: inline-block;
 
-        h2 {
-            text-transform: uppercase;
-        }
+        h2 { text-transform: uppercase; }
 
         &:before,
         &:after {
