@@ -1,6 +1,6 @@
 /*** MIXINS ***/
 
-.calcrem(@size) {
+.calc-rem(@size) {
     @remsize: (@size / @base-font-size) * 1rem;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .font-size(@size) {
-    .calcrem(@size);
+    .calc-rem(@size);
     font-size: @size; // Fallback for older browsers
     font-size: @remsize;
 }
