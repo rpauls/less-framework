@@ -88,4 +88,46 @@
         }
     }
 
+    /* DROPDOWN MENU */
+
+    .menu-item .menu-item {
+        display: block;
+    }
+
+    .menu-child {
+        color: @color-light;
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        z-index: 3;
+    }
+
+    &.menu-h {
+        .menu-child {
+            left: 0;
+            top: auto;
+            width: inherit;
+        }
+    }
+
+    .menu-allow-hover:hover > .menu-child,
+    .menu-active > .menu-child {
+        display: block;
+        position: absolute;
+    }
+
+    // Drop Arrow for default (vertical) menu
+    .menu-has-child > .menu-link:after {
+        padding-left: 0.5em;
+        content: "\25B8";
+        font-size: small;
+    }
+
+    // Drop Arrow for horizontal menu-link
+    &.menu-h .menu-has-child > .menu-link:after {
+    content: "\25BE";
+}
 }
