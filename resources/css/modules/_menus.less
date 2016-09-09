@@ -2,7 +2,11 @@
 
 .menu {
     .box-sizing(border-box);
-    display: inline-block; // Limit dimensions to content sizes
+
+    &.menu-auto-width {
+        display: inline-block; // Limit dimensions to content sizes
+    }
+
 
     .menu-list,
     .menu-item {
@@ -62,6 +66,26 @@
     .menu-link:hover,
     .menu-link:focus {
         background-color: @color-light;
+    }
+
+    /* HORIZONTAL MENU */
+
+    &.menu-h {
+        width: 100%;
+        white-space: nowrap;
+
+        .menu-list {
+            display: inline-block;
+        }
+
+        .menu-item,
+        .menu-heading,
+        .menu-separator {
+            display: inline-block;
+            *display: inline;
+            zoom: 1;
+            vertical-align: middle;
+        }
     }
 
 }
