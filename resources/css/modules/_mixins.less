@@ -1,9 +1,26 @@
 /*** MIXINS ***/
 
+/*
+ *  INCLUDED MIXINS:
+ *
+ *  .calc-rem(...)
+ *  .clearfix(...)
+ *  .bordered(...)
+ *  .font-size(...)
+ *  .appearance(...)
+ *  .filter(...)
+ *  .font-feature-settings(...)
+ *  .font-variant-ligatures(...)
+ *  .translate3d(...)
+ */
+
+/* Calculate optimal REM based on default font-size */
 .calc-rem(@size) {
-    @remsize: (@size / @base-font-size) * 1rem;
+    @remsize: (@size / 16px) * 1rem;
 }
 
+
+/* ClearFix */
 .clearfix() {
 
     *zoom: 1; /* Workaround for older IE */
@@ -18,17 +35,21 @@
     }
 }
 
+
+/* Calculate and set font-size based on parameter with px fallback */
 .font-size(@size) {
     .calc-rem(@size);
     font-size: @size; // Fallback for older browsers
     font-size: @remsize;
 }
 
+
 .appearance(@appearance) {
     -webkit-appearance: @appearance;
     -moz-appearance: @appearance;
     appearance: @appearance;
 }
+
 
 .filter(@filter) {
     -webkit-filter: @filter;
@@ -37,35 +58,19 @@
     filter: @filter;
 }
 
-.transform-origin(@origin) {
-    -webkit-transform-origin: @origin;
-    -moz-transform-origin: @origin;
-    -ms-transform-origin: @origin;
-    -o-transform-origin: @origin;
-    transform-origin: @origin;
+.font-feature-settings(@settings) {
+    -webkit-font-feature-settings: @settings;
+    -moz-font-feature-settings: @settings"=1";
+    -moz-font-feature-settings: @settings;
+    -ms-font-feature-settings: @settings 1;
+    font-feature-settings: @settings;
 }
 
-.keyframes(@name; @arguments) {
-	@-moz-keyframes @name { @arguments(); }
-	@-webkit-keyframes @name { @arguments(); }
-	@keyframes @name { @arguments(); }
+.font-variant-ligatures(@ligatures) {
+    -webkit-font-variant-ligatures: @ligatures;
+    font-variant-ligatures: @ligatures;
 }
 
-.animation(@animation) {
-    -webkit-animation: @animation;
-    -moz-animation: @animation;
-    -ms-animation: @animation;
-    -o-animation: @animation;
-    animation: @animation;
-}
-
-.translate3d (@x, @y: 0, @z: 0) {
-    .transform(translate3d(@x, @y, @z));
-}
-
-.perspective (@perspective: 1000) {
-    -webkit-perspective: @perspective;
-    -moz-perspective: @perspective;
-    -ms-perspective: @perspective;
-    perspective: @perspective;
+.translate3d(@x:0, @y:0, @z: 0) {
+  .transform(translate3d(@x, @y, @z));
 }
