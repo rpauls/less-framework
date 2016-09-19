@@ -247,9 +247,6 @@ Alle LESS-Files finden sich im Verzeichnis `resources/css/`.
     - `(...)`
 - `partials/` : Beinhaltet alle Seiten- und Inhalt-spezifischen Definitionen.
     - `_base.less` : Basis-Definitionen für alle Seiten.
-    - `_grohe.les` : Basis-Definitionen für alle Grohe-spezifischen Seiten.
-    - `_grohe/` : Beinhaltet Grohe-spezifische Definitionen von Seiten und Content-Elementen.
-        - `(...)`
 - `vendor/` : Beinhaltet externe LESS-Files/Libraries.
     - `_normalize.less` : [Normalize.css](https://necolas.github.io/normalize.css/) - Konsistente browserunabhängige Darstellung von HTML-Elementen.
     - `_elements.less` : [LESS Elements](http://lesselements.com/) - LESS Library mit hilfreichen Mixins.  

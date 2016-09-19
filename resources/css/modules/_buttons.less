@@ -1,10 +1,23 @@
 /*** BUTTONS ***/
 
+a.btn {
+    background: @btn-color-primary !important;
+    color: @btn-color-font !important;
+
+    &.btn-hover,
+    &:hover,
+    &:focus {
+        background: @btn-color-primary-hov !important;
+        color: @btn-color-font-hov !important;
+    }
+}
+
 .btn {
     display: inline-block;
     line-height: 1;
     zoom: 1;
-    white-space: nowrap;
+    white-space: wrap;
+    word-wrap: break-word;
     vertical-align: middle;
     text-decoration: none;
     cursor: pointer;
@@ -16,8 +29,11 @@
     .transition();
     font-family: inherit;
     font-size: 100%;
-    padding: 0.5em 1em;
-
+    max-width: 100%;
+    overflow: hidden;
+    padding: @btn-padding-v @btn-padding-h;
+    text-align: center;
+    line-height: 24px;
     background: @btn-color-primary;
     color: @btn-color-font;
     border: 0;
@@ -33,7 +49,7 @@
     &.btn-hover,
     &:hover,
     &:focus {
-        background: @btn-color-primary;
+        background: @btn-color-primary-hov;
         color: @btn-color-font-hov;
         .box-shadow(0 0 0 1px rgba(0,0,0, 0.15) inset);
         border-color: #000\9;
@@ -70,15 +86,17 @@
     &.btn-size-l {  font-size: 110%; }
     &.btn-size-xl {  font-size: 125%; }
 
+    &.btn-width-full { width: 100%;}
+
     &.btn-secondary {
-        background: @btn-color-secondary;
-        color: @btn-color-font;
+        background: @btn-color-secondary !important;
+        color: @btn-color-font !important;
 
         &.btn-hover,
         &:hover,
         &:focus {
-            background: @btn-color-secondary;
-            color: @btn-color-font-hov;
+            background: @btn-color-secondary !important;
+            color: @btn-color-font-hov !important;
         }
     }
 }

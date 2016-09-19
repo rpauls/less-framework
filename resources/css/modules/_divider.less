@@ -1,0 +1,48 @@
+/*** Divider ***/
+
+hr {
+    display: block;
+    border: 0;
+    background-color: @color-silver;
+    height: 1px;
+    width: 100%;
+}
+
+.divider {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    word-wrap: wrap;
+
+    h2 { text-transform: uppercase; }
+
+    .divider-line {
+        position: relative;
+        display: inline-block;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 9999px;
+            height: 1px;
+            background: @color-silver;
+        }
+
+        &:before {
+            right: 100%;
+            margin-right: 15px;
+        }
+
+        &:after {
+            left: 100%;
+            margin-left: 15px;
+        }
+
+    }
+
+    @media screen and (min-width: @tablet-viewport-width) {
+        word-wrap: nowrap;
+    }
+}
