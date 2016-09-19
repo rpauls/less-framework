@@ -144,7 +144,7 @@ __Input__
 __Select__ _(Dropdown)_
 ```html
 <form class="forms form-stack">
-    <label for="select1">Dropdown (Select) <span class="grohe-color-02">*</span></label>
+    <label for="select1">Dropdown (Select) <span class="color-silver">*</span></label>
     <select class="form-dropdown" id="select1">
         <option>Opt #1</option>
         <option>Opt #2</option>
@@ -223,7 +223,7 @@ Dieser kann über die CSS-Klasse `.btn-disabled` auch ohne disabled-Attribut ver
 __Divider with centered title__
 ```html
 <div class="divider">
-    <div class="divider-line"><h2>GROHE HTML Web Assets</h2></div>
+    <div class="divider-line"><h2>Divider with centered title</h2></div>
 </div>
 ```
 
@@ -241,13 +241,13 @@ __Headings__
 ---
 
 ## LESS DIRECTORY STRUCTURE
-Alle LESS-Files finden sich im Verzeichnis `resources/css/`.
+All LESS-Files are located within the directory `resources/css/`.
 
-- `modules/` : Beinhaltet alle Definitionen von Standard-Elementen und des Basis-LESS-Frameworks.
+- `modules/` : Contains all definitions of Default-elements and the basic less framework.
     - `(...)`
-- `partials/` : Beinhaltet alle Seiten- und Inhalt-spezifischen Definitionen.
-    - `_base.less` : Basis-Definitionen für alle Seiten.
-- `vendor/` : Beinhaltet externe LESS-Files/Libraries.
-    - `_normalize.less` : [Normalize.css](https://necolas.github.io/normalize.css/) - Konsistente browserunabhängige Darstellung von HTML-Elementen.
-    - `_elements.less` : [LESS Elements](http://lesselements.com/) - LESS Library mit hilfreichen Mixins.  
-- `main.less` : Importiert alle einzelnen LESS-Files, enthält keine eigenen Definitionen.
+- `partials/` : Contains all page- and content-specific definitions.
+    - `_base.less` : Base definitions for all pages.
+- `vendor/` : Contains external less files/libraries.
+    - `_normalize.less` : [Normalize.css](https://necolas.github.io/normalize.css/) - Consistent browser independent rendering of html elements.
+    - `_elements.less` : [LESS Elements](http://lesselements.com/) - LESS library containing helpful mixins.  
+- `main.less` : Imports all individual less files, contains no direct definitions.
