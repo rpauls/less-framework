@@ -184,36 +184,36 @@ Die CSS-Klasse `.form-input-full` ermöglicht es allen input-Elementen in einem 
 ---
 
 ## BUTTONS
-Die Button-Styles können sowohl auf button-Elemente, als auch auf Link-Elemente (`<a>`) angewendet werden.
+The pre-defined button styles can be applied to button elements, as well as link elements (`<a>`).
 
 ```html
-<button class="btn">Buttontext</button>
+<button class="btn">Button text</button>
 ```
 
 ```html
-<a class="btn">Buttontext</a>
+<a class="btn">Button text</a>
 ```
 __Farbgebung__
-Die Button-Elemente lassen sich über die CSS-Klasse `btn-scondary` in der Farbgebung _(Background & Color)_ beeinflussen.
-LESS-Variablen zum verändern der Farben finden sich in der Datei `_variables.less`.
+The color of the button elements can be influenced by the css class `btn-scondary` _(Background & Color)_.
+LESS variables to edit the default colors can be found in the file `_variables.less`.
 ```html
-<button class="btn btn-secondary">Buttontext</button>
+<button class="btn btn-secondary">Button text</button>
 ```
 
 __Maximale Breite__
-Die Breite der Button-Elemente passt sich im Regelfall automatisch an seinen Text-Inhalt an.
-Über die CSS-Klasse `btn-width-full` kann das Button-Element auf die maximale Breite _(100%)_ erweitert werden.
+The width of the button elements adjusts itself automatically based upon its content.
+Using the css class `btn-width-full`, it is possible to set the width of a button element to the maximum available width _(100%)_.
 ```html
-<button class="btn btn-width-full">Buttontext</button>
+<button class="btn btn-width-full">Button text</button>
 ```
 
 __Hover__
-Alle Buttons verfügen über einen Default-Hover-Style.
-Dieser kann über die CSS-Klasse `.btn-hover` auch ohne Default-Hover Events verwendet werden.
+All buttons have a default Hover-Style.
+Using the css class `.btn-hover`, the default Hover-Style can be used without a default hover event.
 
 __Disabled__
-Alle Buttons verfügen über einen Default-Disabled-Style.
-Dieser kann über die CSS-Klasse `.btn-disabled` auch ohne disabled-Attribut verwendet werden.
+All buttons have a default Disabled-Style.
+Using the css class `.btn-disabled`, the default Disabled-Style can be used without a default disabled-Attribute.
 
 
 ---
